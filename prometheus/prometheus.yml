@@ -33,7 +33,7 @@ scrape_configs:
     scrape_interval: 5s
 
     static_configs:
-         - targets: ['localhost:9090']
+         - targets: ['prometheus:9090']
 
   - job_name: 'node-exporter'
 
@@ -70,4 +70,4 @@ scrape_configs:
       - source_labels: []
         regex: .*
         target_label: __address__
-        replacement: 192.168.1.228:9115  # Blackbox exporter.
+        replacement: blackbox-exporter:9115  # Blackbox exporter.
