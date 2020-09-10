@@ -75,8 +75,6 @@ services:
       - ./grafana/provisioning/:/etc/grafana/provisioning/
     env_file:
       - ./grafana/config.monitoring
-    command:
-      - 'grafana-cli plugins install grafana-piechart-panel'
     # networks:
     #   - monitor-net
     restart: always
