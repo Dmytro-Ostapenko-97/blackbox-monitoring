@@ -239,7 +239,6 @@ scrape_configs:
       - skinandbodyrefinery.com 
       - kevinwelchmd.com 
       - deuamerica.com 
-
     relabel_configs:
       - source_labels: [__address__]
         regex: (.*)(:80)?
