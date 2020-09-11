@@ -1,12 +1,13 @@
 global:
-  scrape_interval:     15s # By default, scrape targets every 15 seconds.
-  evaluation_interval: 15s # By default, scrape targets every 15 seconds.
+  scrape_interval:     1m # By default, scrape targets every 15 seconds.
+  evaluation_interval: 1m # By default, scrape targets every 15 seconds.
   # scrape_timeout is set to the global default (10s).
+  scrape_timeout: 45s
 
   # Attach these labels to any time series or alerts when communicating with
   # external systems (federation, remote storage, Alertmanager).
   external_labels:
-      monitor: 'my-project'
+      monitor: 'blackbox-host-monitoring'
 
 # Load and evaluate rules in this file every 'evaluation_interval' seconds.
 rule_files:
@@ -53,6 +54,19 @@ scrape_configs:
       module: [http_2xx]  # Look for a HTTP 200 response.
     static_configs:
     - targets:
+      - store.lowcountryplasticsurgery.com
+      - anewyouclinic.com 
+      - hellosmooth.dermpro.com
+      - mirabellamedspa.dermpro.com
+      - culturamed.dermpro.com
+      - coolsculptingwoodstock.dermpro.com
+      - southeasterndermatology.dermpro.com
+      - virginiamohs.dermpro.com
+      - ctdermgroup.dermpro.com
+      - tulsasurgicalarts.com
+      - cosmedoctor.com
+      - apexdermatology.com
+      - dayglomedspa.com
       - store.drpeterkay.com 
       - store.metairieplasticsurgeons.com 
       - store.bwderm.com 
@@ -70,6 +84,9 @@ scrape_configs:
       - store.villagedermatology.net 
       - store.wimedispa.com 
       - store.nawadaplasticsurgery.com 
+      - dallasassocderm.com
+      - northtexasderm.com
+      - auralaser.com
       - store.nuamedspa.com 
       - store.doverskinhealth.com 
       - shop.deepbluemedspa.com 
@@ -101,7 +118,7 @@ scrape_configs:
       - store.miamiplasticsurgery.com 
       - store.visagederm.com 
       - store.neemmedicalspa.com 
-      - sdermstore.ogdenclinic.com 
+      - dermstore.ogdenclinic.com
       - store.woodlandsmedicalaesthetics.com 
       - store.txfaces.com 
       - store.charlotteskinandlaser.com 
