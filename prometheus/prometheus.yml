@@ -118,7 +118,7 @@ scrape_configs:
       - store.miamiplasticsurgery.com 
       - store.visagederm.com 
       - store.neemmedicalspa.com 
-      - dermstore.ogdenclinic.com
+      - dermstore.ogdenclinic.com 
       - store.woodlandsmedicalaesthetics.com 
       - store.txfaces.com 
       - store.charlotteskinandlaser.com 
